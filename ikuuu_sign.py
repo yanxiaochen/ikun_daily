@@ -9,19 +9,10 @@ from email.mime.text import MIMEText
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 if __name__ == '__main__':
-    msg_from = '3502913960@qq.com'
+    msg_from = '1615703120@qq.com'
     passwd = environ.get("EMAIL_PWD")
 
     params = [
-        {
-            "email": 'shuffling36@gmail.com',
-            "passwd": environ.get("GMAIL_SHUFFLING36_PWD_IKUUU")
-        },
-        {
-            "email": '3502913960@qq.com',
-            "passwd": environ.get("QQ_3502913960_PWD_IKUUU")
-        },
-
         {
             "email": '1615703120@qq.com',
             "passwd": environ.get("QQ_1615703120_PWD_IKUUU")

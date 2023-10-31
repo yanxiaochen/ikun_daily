@@ -9,7 +9,7 @@ from email.mime.text import MIMEText
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 if __name__ == '__main__':
-    msg_from = '1615703120@qq.com'
+    msg_from = '669858016@qq.com'
     passwd = environ.get("EMAIL_PWD")
 
     params = [
@@ -37,8 +37,6 @@ if __name__ == '__main__':
             msg['From'] = msg_from
             s = smtplib.SMTP_SSL('smtp.qq.com', 465)
             s.login(msg_from, passwd)
-            if param['email'].__eq__('shuffling36@gmail.com'):
-                param['email'] = '1829462342@qq.com'
             if param['email'].__eq__('1615703120@qq.com'):
                 param['email'] = '669858016@qq.com'
             s.sendmail(msg_from, param['email'], msg.as_string())

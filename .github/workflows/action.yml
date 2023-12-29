@@ -32,6 +32,7 @@ jobs:
           GMAIL_SHUFFLING36_PWD_IKUUU: ${{ secrets.GMAIL_SHUFFLING36_PWD_IKUUU }}
           QQ_1615703120_PWD_IKUUU: ${{ secrets.QQ_1615703120_PWD_IKUUU }}
           QQ_3502913960_PWD_IKUUU: ${{ secrets.QQ_3502913960_PWD_IKUUU }}
+          WJL_PWD_IKUN: ${{ secrets.WJL_PWD_IKUN }}
         run: python3 ./ikuuu_sign.py
       - name: Show the timezone
         run: |

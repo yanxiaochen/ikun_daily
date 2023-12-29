@@ -20,6 +20,10 @@ if __name__ == '__main__':
         {
             "email": 'shuffling36@gmail.com',
             "passwd": environ.get("GMAIL_SHUFFLING36_PWD_IKUUU")
+        },
+        {
+            "email": '2543147543@qq.com',
+            "passwd": environ.get("WJL_PWD_IKUN")
         }
     ]
     print(params)

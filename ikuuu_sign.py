@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     for param in params:
         msg = MIMEMultipart()
-        re = request.post(url='https://ikuuu.me/auth/login', params=param, verify=False)
+        re = request.post(url='https://ikuuu.pw/auth/login', params=param, verify=False)
         print(re.json()['msg'])
         msg.attach(MIMEText(re.json()['msg'] + '\r\n', 'plain', 'utf-8'))
         re = request.post(url='https://ikuuu.me/user/checkin', verify=False)

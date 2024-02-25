@@ -34,11 +34,11 @@ if __name__ == '__main__':
         re = request.post(url='https://ikuuu.pw/auth/login', params=param, verify=False)
         print(re.json()['msg'])
         msg.attach(MIMEText(re.json()['msg'] + '\r\n', 'plain', 'utf-8'))
-        re = request.post(url='https://ikuuu.me/user/checkin', verify=False)
+        re = request.post(url='https://ikuuu.pw/user/checkin', verify=False)
         print(re.json())
         if re.json()['ret'] == 1:
             msg.attach(MIMEText(re.json()['msg'] + '\r\n', 'plain', 'utf-8'))
-            re = request.get(url='https://ikuuu.me/user/logout', verify=False)
+            re = request.get(url='https://ikuuu.pw/user/logout', verify=False)
             print('已退出账号')
             msg.attach(MIMEText('已退出账号', 'plain', 'utf-8'))
             msg['Subject'] = 'ikuuu 每日流量签到提醒'
@@ -52,5 +52,5 @@ if __name__ == '__main__':
             s.sendmail(msg_from, param['email'], msg.as_string())
             print(f'邮件发送成功:{msg_from}  ---> {param["email"]}')
             continue
-        re = request.get(url='https://ikuuu.me/user/logout', verify=False)
+        re = request.get(url='https://ikuuu.pw/user/logout', verify=False)
         print('已退出账号')

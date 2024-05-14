@@ -53,4 +53,4 @@ if __name__ == '__main__':
             print(f'邮件发送成功:{msg_from}  ---> {param["email"]}')
             continue
         re = request.get(url='https://ikuuu.pw/user/logout', verify=False)
-        print('已退出账号！')
+        print('已退出账号')
